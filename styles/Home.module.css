@@ -1,5 +1,34 @@
 .container {
+
+	overflow: hidden;
   padding: 0 2rem;
+  margin:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: url("#flyOn");
+  animation: wavemover 10s infinite alternate linear;
+  font-family: 'Rubik Mono One', sans-serif;
+  background-image:
+    radial-gradient(80% 100% at top left,transparent 93%, #fff 92.5%),
+    linear-gradient(80deg, #557ce7 0%, #3fadcf 100%); 
+}
+
+
+.h1 {
+  color: #fff;
+  font-size: 3.6em;
+  max-width: 7ch;
+  opacity: .6;
+  margin-left: 20%;
+  animation: shad-anim 15s linear infinite;
+}
+
+@keyframes wavemover {
+  100% {
+    padding-left: 300px;
+    transform: translateX(-100px);
+  }
 }
 
 .main {
@@ -73,6 +102,11 @@
   max-width: 800px;
 }
 
+.portfolio_item_container {
+  display: "grid";
+  grid-template-columns: "1fr 1fr 1fr 1fr 1fr";
+}
+
 .card {
   margin: 1rem;
   padding: 1.5rem;
@@ -113,4 +147,151 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.x1{
+	padding: 100px 0;
+	background: #c9dbe9;
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+/*Time to finalise the cloud shape*/
+.x1 {
+	width: 200px; height: 60px;
+	background: #fff;
+	color: white;
+  font-size: 20em;
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+	position: relative; 
+}
+
+.x1:before, .x1:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.x1:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+  width: 200px; height: 60px;
+	background: #fff;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+	position: relative; 
+	left: 200px;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; /*opacity proportional to the size*/
+	
+	/*Speed will also be proportional to the size and opacity*/
+	/*More the speed. Less the time in 's' = seconds*/
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+  width: 200px; height: 60px;
+	background: #fff;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+	position: relative; 
+	left: -250px; top: -200px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 470px; top: -250px;
+	
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: -150px; top: -150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+.canvas { 
+   overflow: hidden;
+   width:100vw;
+   height:100vh;
+   background-color:black;
+  }
+
+.title{
+  font-weight: bold;
+  color: white;
+
+  font-size: 5em; 
+  text-shadow: .03em .03em 0 rgb(255, 255, 255);
 }
