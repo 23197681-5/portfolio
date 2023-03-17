@@ -1,3 +1,6 @@
+export default function Home() {
+  return (
+    <div>
 Google Cloud Fundamentals: Core Infrastructure
 Coursera
 https://coursera.org/share/c37d84d56689d73c3bd8683a5bae77f0
@@ -168,3 +171,5 @@ https://www.efset.org/cert/yjMQhM
 École Polytechnique
 https://coursera.org/share/28458d816e388b307b4b2f219140da7f
 <br>
+</div>)
+}
