@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Portfolio() {
   return (
     <div>
 Google Cloud Fundamentals: Core Infrastructure
